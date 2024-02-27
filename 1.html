@@ -1,0 +1,38 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Video Player</title>
+</head>
+<body>
+
+    <h1>Click the Thumbnail to Play the Video</h1>
+
+    <!-- Thumbnail Image -->
+    <img src="thumbnail.jpg" alt="Video Thumbnail" id="thumbnail" style="cursor: pointer;" onclick="playVideo()">
+
+    <!-- Video Player -->
+    <video id="videoPlayer" controls style="display: none;">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        function playVideo() {
+            // Get the video element and the thumbnail element
+            var video = document.getElementById("videoPlayer");
+            var thumbnail = document.getElementById("thumbnail");
+
+            // Show the video player and hide the thumbnail
+            video.style.display = "block";
+            thumbnail.style.display = "none";
+
+            // Play the video
+            video.play();
+        }
+    </script>
+
+</body>
+</html>
