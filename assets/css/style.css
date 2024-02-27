@@ -14,6 +14,9 @@ body {
   color: #444444;
 }
 
+#ou{
+  font-weight: bold;
+}
 a {
   color: #3fbbc0;
   text-decoration: none;
